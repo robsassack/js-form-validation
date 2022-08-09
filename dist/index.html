@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS Form Validation Example</title>
 </head>
+
 <body>
-  <form>
+  <form novalidate>
     <div class="email-input">
       <label for="email">Email</label>
-      <input type="email" id="email" name="email">
+      <input type="email" id="email" name="email" required>
+      <span class="error"></span>
+    </div>
     </div>
     <div class="country-input">
       <label for="country">Country</label>
-      <select id="country" name="country"></select>
+      <select id="country" name="country" required>
+        <option value=""></option>
+      </select>
+      <span class="error"></span>
     </div>
     <div class="zipcode-input">
       <label for="zipcode">Zip Code</label>
-      <input type="text" name="zipcode" id="zipcode" maxlength="5">
+      <input type="text" name="zipcode" id="zipcode" maxlength="5" required>
+      <span class="error"></span>
     </div>
     <div class="pass-input">
       <label for="password">Password</label>
-      <input type="password" name="password" id="password">
+      <input type="password" name="password" id="password" required>
       <label for="passconfirm">Confirm Password</label>
-      <input type="password" name="passconfirm" id="passconfirm">
+      <input type="password" name="passconfirm" id="passconfirm" required>
+      <span class="error"></span>
     </div>
-    <input type="submit" value="Submit">
+    <button>Submit</button>
   </form>
 </body>
-<script src ="main.js"></script>
+<script src="main.js"></script>
+
 </html>
